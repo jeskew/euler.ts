@@ -1,0 +1,17 @@
+{
+  "name": "@jsq/euler.ts",
+  "version": "0.0.1",
+  "repository": "https://github.com/jeskew/euler.ts",
+  "author": "Jonathan Eskew",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^19.2.2",
+    "jest": "^19.0.2",
+    "typescript": "^2.2.2"
+  },
+  "scripts": {
+    "prepublishOnly": "tsc",
+    "pretest": "tsc",
+    "test": "jest"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "target": "es6",
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
