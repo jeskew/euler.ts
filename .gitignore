@@ -1,4 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
+build/
 logs
 *.log
 npm-debug.log*
@@ -24,5 +25,6 @@ typings/
 *.tgz
 .yarn-integrity
 .env
-*.js
-*.js.map
+
+yarn.lock
+package-lock.json

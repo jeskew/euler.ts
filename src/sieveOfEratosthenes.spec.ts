@@ -1,4 +1,4 @@
-import sieveOfEratosthenes from "../src/sieveOfEratosthenes";
+import {sieveOfEratosthenes} from "./sieveOfEratosthenes";
 
 describe('sieveOfEratosthenes', () => {
     it('should return all primes below a provided ceiling', () => {

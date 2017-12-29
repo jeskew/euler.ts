@@ -1,26 +1,24 @@
-import divisibleByAllUpTo from '../divisibleByAllUpTo';
-import Problem from "../Problem";
-import reduce from "../reduce";
-import sieveOfEratosthenes from "../sieveOfEratosthenes";
+import {divisibleByAllUpTo} from '../divisibleByAllUpTo';
+import {sieveOfEratosthenes} from "../sieveOfEratosthenes";
+import {reduce} from '@jsq/async-seq';
 
-export const Problem5: Problem = {
-    number: 5,
-    description: `2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+/**
+ * 2520 is the smallest number that can be divided by each of the numbers from 1
+ * to 10 without any remainder.
+ *
+ * What is the smallest positive number that is evenly divisible by all of the
+ * numbers from 1 to 20?
+ */
+export const solve = async () => {
+    const productOfPrimesUnder20 = await reduce(
+        (product: number, nextPrime: number) => product * nextPrime,
+        sieveOfEratosthenes(20)
+    )
+    let potentialAnswer = productOfPrimesUnder20
 
-What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?`,
-    solve(): Promise<number> {
-        return new Promise((resolve) => {
-            const productOfPrimesUnder20 = reduce(
-                sieveOfEratosthenes(20),
-                (product: number, nextPrime: number) => product * nextPrime,
-                1
-            );
-            let potentialAnswer = productOfPrimesUnder20;
+    while (!divisibleByAllUpTo(potentialAnswer, 20)) {
+        potentialAnswer += productOfPrimesUnder20
+    }
 
-            while (!divisibleByAllUpTo(potentialAnswer, 20)) {
-                potentialAnswer += productOfPrimesUnder20;
-            }
-            resolve(potentialAnswer);
-        });
-    },
-};
+    return potentialAnswer
+}

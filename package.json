@@ -1,17 +1,34 @@
 {
-  "name": "@jsq/euler.ts",
+  "name": "@jsq/euler-workthrough",
   "version": "0.0.1",
   "repository": "https://github.com/jeskew/euler.ts",
-  "author": "Jonathan Eskew",
+  "author": {
+    "name": "Jonathan Eskew",
+    "email": "jonathan@jeskew.net"
+  },
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^19.2.2",
-    "jest": "^19.0.2",
-    "typescript": "^2.2.2"
+    "@types/jasmine": "^2.8.3",
+    "jasmine": "^2.8.0",
+    "karma": "^2.0.0",
+    "karma-browserify": "^5.1.2",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "nyc": "^11.4.1",
+    "typescript": "^2.6"
   },
   "scripts": {
+    "browsertest": "npm run pretest && karma start",
+    "coverage": "nyc jasmine",
     "prepublishOnly": "tsc",
-    "pretest": "tsc",
-    "test": "jest"
+    "pretest": "tsc -p tsconfig.test.json",
+    "test": "jasmine"
+  },
+  "dependencies": {
+    "@jsq/async-seq": "^0.3.0",
+    "tslib": "^1.8.1"
+  },
+  "engines": {
+    "node": ">=6"
   }
 }

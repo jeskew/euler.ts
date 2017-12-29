@@ -1,4 +1,4 @@
-import primeFactors from "../src/primeFactors";
+import {primeFactors} from "./primeFactors";
 
 describe('primeFactors', () => {
     it('should return the prime factors for a non-prime number', () => {

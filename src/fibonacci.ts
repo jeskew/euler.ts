@@ -1,4 +1,4 @@
-export default function* fibonacci(): IterableIterator<number> {
+export function* fibonacci(): IterableIterator<number> {
     let a = 1;
     let b = 1;
     while (true) {
