@@ -1,4 +1,4 @@
-export default function divisibleByAllUpTo(
+export function divisibleByAllUpTo(
     dividend: number,
     ceiling: number
 ): boolean {

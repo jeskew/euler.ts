@@ -5,13 +5,20 @@
   "author": "Jonathan Eskew",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^19.2.2",
-    "jest": "^19.0.2",
-    "typescript": "^2.2.2"
+    "@types/jest": "^22",
+    "jest": "^22",
+    "typescript": "^2.6"
   },
   "scripts": {
     "prepublishOnly": "tsc",
-    "pretest": "tsc",
-    "test": "jest"
+    "pretest": "tsc -p tsconfig.test.json",
+    "test": "jest --coverage --mapCoverage"
+  },
+  "dependencies": {
+    "@jsq/async-seq": "^0.3.0",
+    "tslib": "^1.8.1"
+  },
+  "engines": {
+    "node": ">=6"
   }
 }
