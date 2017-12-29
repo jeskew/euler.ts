@@ -14,7 +14,7 @@ const knownAnswers = new Map([
 ]);
 
 describe('Solutions calculate correct answer', () => {
-    for (let [ordinal, answer] of knownAnswers) {
+    for (const [ordinal, answer] of knownAnswers) {
         it(
             `should get ${answer} for problem #${ordinal}`,
             async () => expect(await (problems.get(ordinal) as Function)())

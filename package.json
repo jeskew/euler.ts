@@ -1,18 +1,23 @@
 {
-  "name": "@jsq/euler.ts",
+  "name": "@jsq/euler-workthrough",
   "version": "0.0.1",
   "repository": "https://github.com/jeskew/euler.ts",
-  "author": "Jonathan Eskew",
+  "author": {
+    "name": "Jonathan Eskew",
+    "email": "jonathan@jeskew.net"
+  },
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^22",
-    "jest": "^22",
+    "@types/jasmine": "^2.8.3",
+    "jasmine": "^2.8.0",
+    "nyc": "^11.4.1",
     "typescript": "^2.6"
   },
   "scripts": {
+    "coverage": "nyc --reporter=lcov --reporter=html npm test && nyc report",
     "prepublishOnly": "tsc",
     "pretest": "tsc -p tsconfig.test.json",
-    "test": "jest --coverage --mapCoverage"
+    "test": "jasmine"
   },
   "dependencies": {
     "@jsq/async-seq": "^0.3.0",
