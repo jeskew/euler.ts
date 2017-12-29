@@ -25,8 +25,6 @@ typings/
 *.tgz
 .yarn-integrity
 .env
-*.js
-*.js.map
 
 yarn.lock
 package-lock.json
