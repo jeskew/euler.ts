@@ -8,6 +8,7 @@ import * as Problem07 from './007';
 import * as Problem08 from './008';
 import * as Problem09 from './009';
 import * as Problem10 from './010';
+import * as Problem11 from './011';
 
 export interface Problem {
     readonly ordinal: number;
@@ -26,3 +27,4 @@ export const problems = new Map<number, () => Promise<number>>()
     .set(8, Problem08.solve)
     .set(9, Problem09.solve)
     .set(10, Problem10.solve)
+    .set(11, Problem11.solve)

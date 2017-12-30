@@ -11,6 +11,7 @@ const knownAnswers = new Map([
     [8, 23514624000],
     [9, 31875000],
     [10, 142913828922],
+    [11, 70600674]
 ]);
 
 describe('Solutions calculate correct answer', () => {
