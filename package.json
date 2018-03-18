@@ -12,11 +12,11 @@
     "jasmine": "^2.8.0",
     "karma": "^2.0.0",
     "karma-browserify": "^5.1.2",
-    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
     "karma-jasmine": "^1.1.1",
     "nyc": "^11.4.1",
     "standard-version": "^4.2.0",
-    "typescript": "^2.6"
+    "typescript": "^2.7"
   },
   "scripts": {
     "browsertest": "npm run pretest && karma start",
@@ -27,8 +27,7 @@
     "test": "jasmine"
   },
   "dependencies": {
-    "@jsq/async-seq": "^0.3.0",
-    "tslib": "^1.8.1"
+    "@jsq/seq": "^0.4.0"
   },
   "engines": {
     "node": ">=6"

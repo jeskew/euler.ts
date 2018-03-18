@@ -1,4 +1,4 @@
-import {range, reduce, sum} from '@jsq/async-seq';
+import { range, reduce, sum } from '@jsq/seq';
 
 /**
  * The sum of the squares of the first ten natural numbers is,

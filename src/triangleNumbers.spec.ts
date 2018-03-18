@@ -1,5 +1,5 @@
 import { triangleNumbers } from './triangleNumbers';
-import { collect, take } from '@jsq/async-seq';
+import { collect, take } from '@jsq/seq';
 
 describe('triangleNumbers', () => {
     it('should return an infinite sequence of triangle numbers', async () => {

@@ -1,4 +1,4 @@
-import {filter, range, sum} from '@jsq/async-seq';
+import { filter, range, sum } from '@jsq/seq';
 
 /**
  * If we list all the natural numbers below 10 that are multiples of 3 or 5, we

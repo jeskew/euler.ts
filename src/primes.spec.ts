@@ -1,5 +1,5 @@
-import {primes} from "./primes";
-import {collect, takeWhile} from '@jsq/async-seq';
+import { primes } from './primes';
+import { collect, takeWhile } from '@jsq/seq';
 
 describe('primes', () => {
     it('should return an infinite sequence of prime numbers', async () => {

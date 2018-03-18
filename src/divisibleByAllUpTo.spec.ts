@@ -1,4 +1,4 @@
-import {divisibleByAllUpTo} from './divisibleByAllUpTo';
+import { divisibleByAllUpTo } from './divisibleByAllUpTo';
 
 describe('divisibleByAllUpTo', () => {
     it('should report that 2520 is divisible by all numbers up to 10', () => {
