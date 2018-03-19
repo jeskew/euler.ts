@@ -11,7 +11,7 @@
  *
  * Find the product *abc*
  */
-export const solve = async (): Promise<number> => {
+export const p009 = () => {
     const tripleSum = 1000
     for (let b = tripleSum; b > 0; b--) {
         for (let a = b; a > 0; a--) {

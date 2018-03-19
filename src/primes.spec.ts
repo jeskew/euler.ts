@@ -1,9 +1,10 @@
 import { primes } from './primes';
-import { collect, takeWhile } from '@jsq/seq';
+import * as test from 'tape';
 
-describe('primes', () => {
-    it('should return an infinite sequence of prime numbers', async () => {
-        expect(await collect(takeWhile(x => x < 10, primes())))
-            .toEqual([2, 3, 5, 7]);
-    });
+test('primes', t => {
+    t.plan(1)
+
+    const [first, second, third, fourth, fifth] = primes();
+
+    t.deepEqual([first, second, third, fourth, fifth], [2, 3, 5, 7, 11]);
 });

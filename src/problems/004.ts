@@ -6,7 +6,7 @@ import {isPalindrome} from '../isPalindrome';
  *
  * Find the largest palindrome made from the product of two 3-digit numbers.
  */
-export const solve = async () => {
+export const p004 = () => {
     let largestPalindrome = 0
     for (let i = 999; i >= 100; i--) {
         for (let j = 999; j >= 100; j--) {

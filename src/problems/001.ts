@@ -1,4 +1,4 @@
-import { filter, range, sum } from '@jsq/seq';
+import { filter, range, sumSync } from '@jsq/seq';
 
 /**
  * If we list all the natural numbers below 10 that are multiples of 3 or 5, we
@@ -8,6 +8,6 @@ import { filter, range, sum } from '@jsq/seq';
  *
  * @see https://projecteuler.net/problem=1
  */
-export const solve = () => sum(
+export const p001 = () => sumSync(
     filter(item => item % 3 === 0 || item % 5 === 0, range(1, 1000))
 )

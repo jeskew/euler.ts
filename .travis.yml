@@ -4,15 +4,5 @@ node_js:
   - "lts/*"
   - "lts/carbon"
   - "lts/boron"
-env:
-  - TEST_SCRIPT=test
 
 sudo: false
-
-matrix:
-  include:
-    - node_js: "lts/carbon"
-      env: TEST_SCRIPT=browsertest
-
-script:
-  - npm run $TEST_SCRIPT

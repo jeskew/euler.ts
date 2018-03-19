@@ -1,7 +1,8 @@
-import {sieveOfEratosthenes} from "./sieveOfEratosthenes";
+import { sieveOfEratosthenes } from './sieveOfEratosthenes';
+import * as test from 'tape';
 
-describe('sieveOfEratosthenes', () => {
-    it('should return all primes below a provided ceiling', () => {
-        expect([...sieveOfEratosthenes(10)]).toEqual([2, 3, 5, 7]);
-    });
+test('sieveOfEratosthenes', t => {
+    t.plan(1);
+
+    t.deepEqual([...sieveOfEratosthenes(10)], [2, 3, 5, 7]);
 });

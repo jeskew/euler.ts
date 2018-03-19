@@ -30,7 +30,7 @@
  * What is the greatest product of four adjacent numbers in the same direction
  * (up, down, left, right, or diagonally) in the 20×20 grid?
  */
-export const solve = async () => {
+export const p011 = () => {
     const parsedGrid = grid.split('\n')
         .map(line => line.split(' ').map(num => parseInt(num)))
     let greatestProduct = 0

@@ -1,4 +1,4 @@
-import { range, reduce, sum } from '@jsq/seq';
+import { range, reduceSync, sumSync } from '@jsq/seq';
 
 /**
  * The sum of the squares of the first ten natural numbers is,
@@ -15,12 +15,12 @@ import { range, reduce, sum } from '@jsq/seq';
  * Find the difference between the sum of the squares of the first one hundred
  * natural numbers and the square of the sum.
  */
-export const solve = async () => {
+export const p006 = () => {
     const ceiling = 101
-    const sumOfSquares = await reduce(
+    const sumOfSquares = reduceSync(
         (carry, num) => carry + (num * num),
         range(ceiling)
     )
-    const sumToCeiling = await sum(range(ceiling))
+    const sumToCeiling = sumSync(range(ceiling))
     return Math.abs(sumOfSquares - sumToCeiling * sumToCeiling)
 }

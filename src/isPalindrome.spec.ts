@@ -1,15 +1,16 @@
-import {isPalindrome} from "./isPalindrome";
+import { isPalindrome } from './isPalindrome';
+import * as test from 'tape';
 
-describe('isPalindrome', () => {
-    it('should return true if the provided value is a palindrome', () => {
-        expect(isPalindrome('racecar')).toBe(true);
-    });
+test('isPalindrome', t => {
+    t.plan(3)
 
-    it('should return false otherwise', () => {
-        expect(isPalindrome('car')).toBe(false);
-    });
+    t.equal(isPalindrome('racecar'), true);
 
-    it('should case provided values to strings', () => {
-        expect(isPalindrome(909)).toBe(true);
-    });
+    t.equal(isPalindrome('car'), false);
+
+    t.equal(
+        isPalindrome(909),
+        true,
+        'should convert provided values to strings'
+    );
 });

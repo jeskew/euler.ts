@@ -1,32 +1,45 @@
-import * as Problem01 from './001';
-import * as Problem02 from './002';
-import * as Problem03 from './003';
-import * as Problem04 from './004';
-import * as Problem05 from './005';
-import * as Problem06 from './006';
-import * as Problem07 from './007';
-import * as Problem08 from './008';
-import * as Problem09 from './009';
-import * as Problem10 from './010';
-import * as Problem11 from './011';
-import * as Problem12 from './012';
+import { p001 } from './001';
+import { p002 } from './002';
+import { p003 } from './003';
+import { p004 } from './004';
+import { p005 } from './005';
+import { p006 } from './006';
+import { p007 } from './007';
+import { p008 } from './008';
+import { p009 } from './009';
+import { p010 } from './010';
+import { p011 } from './011';
+import { p012 } from './012';
+import { p013 } from './013';
 
-export interface Problem {
-    readonly ordinal: number;
+const problems = new Map<number, () => number>()
+    .set(1, p001)
+    .set(2, p002)
+    .set(3, p003)
+    .set(4, p004)
+    .set(5, p005)
+    .set(6, p006)
+    .set(7, p007)
+    .set(8, p008)
+    .set(9, p009)
+    .set(10, p010)
+    .set(11, p011)
+    .set(12, p012)
+    .set(13, p013);
 
-    solve(): Promise<number>;
+export {
+    problems,
+    p001,
+    p002,
+    p003,
+    p004,
+    p005,
+    p006,
+    p007,
+    p008,
+    p009,
+    p010,
+    p011,
+    p012,
+    p013,
 }
-
-export const problems = new Map<number, () => Promise<number>>()
-    .set(1, Problem01.solve)
-    .set(2, Problem02.solve)
-    .set(3, Problem03.solve)
-    .set(4, Problem04.solve)
-    .set(5, Problem05.solve)
-    .set(6, Problem06.solve)
-    .set(7, Problem07.solve)
-    .set(8, Problem08.solve)
-    .set(9, Problem09.solve)
-    .set(10, Problem10.solve)
-    .set(11, Problem11.solve)
-    .set(12, Problem12.solve)

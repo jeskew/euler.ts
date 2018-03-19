@@ -5,6 +5,6 @@ import {primeFactors} from "../primeFactors";
  *
  * What is the largest prime factor of the number 600851475143?
  */
-export const solve = async () => primeFactors(600851475143)
+export const p003 = () => primeFactors(600851475143)
     .sort((a, b) => a - b)
     .pop() as number

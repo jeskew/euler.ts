@@ -1,4 +1,5 @@
-import {problems} from './problems';
+import { problems } from '.';
+import * as test from 'tape';
 
 const knownAnswers = new Map([
     [1, 233168],
@@ -13,14 +14,17 @@ const knownAnswers = new Map([
     [10, 142913828922],
     [11, 70600674],
     [12, 76576500],
+    [13, 5537376230],
 ]);
 
-describe('Solutions calculate correct answer', () => {
+test('Solutions calculate correct answer', t => {
+    t.plan(knownAnswers.size)
+
     for (const [ordinal, answer] of knownAnswers) {
-        it(
-            `should get ${answer} for problem #${ordinal}`,
-            async () => expect(await (problems.get(ordinal) as Function)())
-                .toEqual(answer)
+        t.equal(
+            (problems.get(ordinal) as Function)(),
+            answer,
+            `should get ${answer} for problem #${ordinal}`
         );
     }
 });

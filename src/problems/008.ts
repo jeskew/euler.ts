@@ -27,7 +27,7 @@
  * Find the thirteen adjacent digits in the 1000-digit number that have the
  * greatest product. What is the value of this product?
  */
-export const solve = async () => {
+export const p008 = () => {
     let largestProduct = 0;
     for (let i = 0; i < massiveNumber.length - 13; i++) {
         let product = 1;

@@ -1,18 +1,24 @@
-import {primeFactors} from "./primeFactors";
+import { primeFactors } from './primeFactors';
+import * as test from 'tape';
 
-describe('primeFactors', () => {
-    it('should return the prime factors for a non-prime number', () => {
-        expect(primeFactors(6)).toEqual([2, 3]);
-    });
+test('primeFactors', t => {
+    t.plan(3)
 
-    it('should include duplicates in the returned factors', () => {
-        expect(primeFactors(12)).toEqual([2, 2, 3]);
-    });
+    t.deepEqual(
+        primeFactors(6),
+        [2, 3],
+        'should return the prime factors for a non-prime number'
+    );
 
-    it(
-        `should include prime factors that exceed the number's square root`,
-        () => {
-            expect(primeFactors(21)).toEqual([3, 7]);
-        }
+    t.deepEqual(
+        primeFactors(12),
+        [2, 2, 3],
+        'should include duplicates in the returned factors'
+    );
+
+    t.deepEqual(
+        primeFactors(21),
+        [3, 7],
+        `should include prime factors that exceed the number's square root`
     );
 });

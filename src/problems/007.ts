@@ -7,4 +7,4 @@ import { skip } from '@jsq/seq';
  *
  * What is the 10 001st prime number?
  */
-export const solve = async () => skip(10000, primes()).next().value
+export const p007 = () => skip(10000, primes()).next().value
