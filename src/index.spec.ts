@@ -15,6 +15,7 @@ const knownAnswers = new Map([
     [11, 70600674],
     [12, 76576500],
     [13, 5537376230],
+    [14, 837799],
 ]);
 
 test('Solutions calculate correct answer', t => {
@@ -22,7 +23,7 @@ test('Solutions calculate correct answer', t => {
 
     for (const [ordinal, answer] of knownAnswers) {
         t.equal(
-            (problems.get(ordinal) as Function)(),
+            problems[ordinal](),
             answer,
             `should get ${answer} for problem #${ordinal}`
         );
